@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Student.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link rel="Stylesheet" href="Stylesheets/MainStyle.css" />
+    <title>Student Page</title>
+    <!-- Start css3menu.com HEAD section -->
+	<link rel="stylesheet" href="Stylesheets/menu2/style.css" type="text/css" />
+	<!-- End css3menu.com HEAD section -->
+	<asp:ContentPlaceHolder ID="adminhead" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    
+</head>
+<body>
+    <form id="form1" runat="server" style="position:absolute;top:0px;left:0px;width:100%;">
+    
+    <div class="table2">
+    
+        <div class="header2">
+            <div style="text-align:left;font-size:large;padding-left:100px">Hi 
+                <asp:Label ID="lblStudent" runat="server" Text=""></asp:Label><span style="float:right;padding-right:100px"><a href="../Login.aspx?a=logout" class="logout">Logout</a></span></div>
+             <span class="footerimg">
+                   <asp:Label ID="Label1" runat="server" ForeColor="Yellow" Text="U"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" ForeColor="Orange" Text="N"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" ForeColor="Lime" Text="I"></asp:Label>
+                    <asp:Label ID="Label4" runat="server" ForeColor="Aqua" Text="T"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" ForeColor="#6600CC" Text="Y"></asp:Label>
+             </span>
+             <span class="footerimg">
+                   <asp:Label ID="Label7" runat="server" ForeColor="White" Text="C"></asp:Label>
+                    <asp:Label ID="Label8" runat="server" ForeColor="Brown" Text="O"></asp:Label>
+                    <asp:Label ID="Label9" runat="server" ForeColor="Green" Text="L"></asp:Label>
+                    <asp:Label ID="Label10" runat="server" ForeColor="Silver" Text="L"></asp:Label>
+                    <asp:Label ID="Label11" runat="server" ForeColor="Red" Text="E"></asp:Label>
+                    <asp:Label ID="Label12" runat="server" ForeColor="Maroon" Text="G"></asp:Label>
+                    <asp:Label ID="Label13" runat="server" ForeColor="Gold" Text="E"></asp:Label>
+             </span>
+             
+            
+        
+        <div class="menu2">
+             <!-- Start css3menu.com BODY section -->
+            <ul id="css3menu1" class="topmenu">
+            <li class="topfirst"><a href="StudentHome.aspx" style="height:18px;line-height:18px;"><span>Student Home</span></a></li>
+	        <li class="topmenu"><a href="EditProfileS.aspx" style="height:18px;line-height:18px;"><span>Edit Profile</span></a></li>
+	        
+	        <li class="topmenu" id="dir"><a href="" style="height:18px;line-height:18px;"><span>Register/Renew Extra Course</span></a>
+	        <ul>
+			        <li><a href="RegisterExtraCourseS.aspx">Register for Extra Course</a></li>
+			        <li><a href="RenewExtraCourseS.aspx">Renew Extra Course</a></li>
+			        
+		        </ul>
+	        </li>
+	        <li class="toplast" id="Li1"><a href="CommunicateFaculty.aspx" style="height:18px;line-height:18px;"><span>Communicate with Faculty</span></a>
+	        </li>
+	        <!-- End css3menu.com BODY section -->
+        </div>
+        
+        </div>
+
+        <div class="middle2">
+            <div class="content2">
+            <asp:ContentPlaceHolder ID="StudentContent" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+        </div>
+   
+        <div class="footer">
+            <span class="copyright">Copyright ©2013 Unity College</span> 
+            <span class="footerimg">
+            <img id="Img1" alt="footerimg" src="Images/unity.ico" width="20" height="20" runat="server" />
+            <asp:Label ID="lblU" runat="server" ForeColor="Yellow" Text="U"></asp:Label>
+            <asp:Label ID="lbln" runat="server" ForeColor="Blue" Text="n"></asp:Label>
+            <asp:Label ID="lblI" runat="server" ForeColor="Lime" Text="I"></asp:Label>
+            <asp:Label ID="lblt" runat="server" ForeColor="Red" Text="t"></asp:Label>
+            <asp:Label ID="lblY" runat="server" ForeColor="#6600CC" Text="Y"></asp:Label>
+            </span>
+        </div>
+   
+    </div>
+    
+    </form>
+</body>
+</html>
+

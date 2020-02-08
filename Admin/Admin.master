@@ -1,0 +1,173 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link rel="stylesheet" href="../Includes/Stylesheets/jquery-ui-1.10.1.custom.css" />
+    <script type="text/javascript" src="../Includes/JS/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../Includes/JS/jquery-ui.js"></script>
+    <script type="text/javascript" src="../Includes/JS/DateTimePicker.js"></script>
+    <link rel="Stylesheet" href="../Includes/Stylesheets/MainStyle.css" />
+    <title>Admin Page</title>
+    
+    <!-- Start css3menu.com HEAD section -->
+	<link rel="stylesheet" href="../Includes/Stylesheets/menu2/style.css" type="text/css" />
+	<!-- End css3menu.com HEAD section -->
+	<asp:ContentPlaceHolder ID="AdminHead" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    
+</head>
+<body>
+    <form id="form1" runat="server" style="position:absolute;top:0px;left:0px;width:100%;">
+    
+    <div class="table2">
+    
+        <div class="header2">
+            <div style="text-align:left;font-size:large;padding-left:100px">Hi 
+                <asp:Label ID="lblAdmin" runat="server" Text=""></asp:Label><span style="float:right;padding-right:100px"><a href="../Login.aspx?a=logout" class="logout">Logout</a></span></div>
+           <%--<span class="footerimg">
+                   <asp:Label ID="Label1" runat="server" ForeColor="Yellow" Text="U"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" ForeColor="Orange" Text="N"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" ForeColor="Lime" Text="I"></asp:Label>
+                    <asp:Label ID="Label4" runat="server" ForeColor="Aqua" Text="T"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" ForeColor="#6600CC" Text="Y"></asp:Label>
+             </span>
+             <span class="footerimg">
+                   <asp:Label ID="Label7" runat="server" ForeColor="White" Text="C"></asp:Label>
+                    <asp:Label ID="Label8" runat="server" ForeColor="Brown" Text="O"></asp:Label>
+                    <asp:Label ID="Label9" runat="server" ForeColor="Green" Text="L"></asp:Label>
+                    <asp:Label ID="Label10" runat="server" ForeColor="Silver" Text="L"></asp:Label>
+                    <asp:Label ID="Label11" runat="server" ForeColor="Red" Text="E"></asp:Label>
+                    <asp:Label ID="Label12" runat="server" ForeColor="Maroon" Text="G"></asp:Label>
+                    <asp:Label ID="Label13" runat="server" ForeColor="Gold" Text="E"></asp:Label>
+             </span>--%>
+             
+             <asp:Label ID="lblHead" class="head" runat="server" Text="UNITY COLLEGE"></asp:Label>
+        
+        <div class="menu2">
+             <!-- Start css3menu.com BODY section -->
+            <ul id="css3menu1" class="topmenu">
+            <li class="topfirst"><a href="AdminHome.aspx" style="height:18px;line-height:18px;"><span>Admin Home</span></a></li>
+	        <li class="topmenu"><a href="#" style="height:18px;line-height:18px;"><span>Operation</span></a>
+	        <ul>
+	        <li><a href="#"><span>Student</span></a>
+		        <ul>
+			        <li><a href="AddStudent.aspx">Add Student</a></li>
+			        <li><a href="StudentDirectory.aspx">Edit Student</a></li>
+			        
+		        </ul></li>
+		        <li><a href="#"><span>Faculty</span></a>
+		        <ul>
+			        <li><a href="AddFaculty.aspx">Add Faculty</a></li>
+			        <li><a href="FacultyDirectory.aspx">Edit Faculty</a></li>
+			        
+		        </ul></li>
+		        <li><a href="#"><span>Subjects</span></a>
+		        <ul>
+			        <li><a href="AddSubject.aspx">Add Subject</a></li>
+			        <li><a href="SubjectDirectory.aspx">Edit Subject</a></li>
+			        
+		        </ul></li>
+		        <li><a href="#"><span>Alumni</span></a>
+		        <ul>
+			        <li><a href="AddAlumni.aspx">Add Alumni</a></li>
+			        <li><a href="AlumniDirectory.aspx">Edit Alumni</a></li>
+			        
+		        </ul></li>
+		        <li><a href="#"><span>Regular Course</span></a>
+		        <ul>
+			        <li><a href="AddRegularCourse.aspx">Add Regular Course</a></li>
+			        <li><a href="EditRegularCourse.aspx">Edit Regular Course</a></li>
+			        
+		        </ul></li>
+		        <li><a href="#"><span>Extra Course</span></a>
+		        <ul>
+			        <li><a href="AddExtraCourse.aspx">Add Extra Course</a></li>
+			        <li><a href="EditExtraCourse.aspx">Edit Extra Course</a></li>
+			        
+		        </ul></li>
+		        <li><a href="#"><span>Event</span></a>
+		        <ul>
+			        <li><a href="AddEvent.aspx">Add Event</a></li>
+			        <li><a href="EditEvent.aspx">Edit Event</a></li>
+			        
+		        </ul></li>
+        		
+		        <li><a href="#"><span>News</span></a>
+		        <ul>
+			        <li><a href="AddNews.aspx">Add News</a></li>
+			        <li><a href="EditNews.aspx">Edit News</a></li>
+			        
+		        </ul></li>
+		        <li><a href="#"><span>Jobs/Internship</span></a>
+		        <ul>
+			        <li><a href="AddPlacement.aspx">Add Job/Internship</a></li>
+			        <li><a href="EditPlacement.aspx">Edit Job/Internship</a></li>
+			        
+		        </ul></li>
+		        <%--<li><a href="#"><span>Internship</span></a>
+		        <ul>
+			        <li><a href="#">Add Internship</a></li>
+			        <li><a href="#">Edit Internship</a></li>
+			        
+		        </ul></li>--%>
+		        <li><a href="#"><span>Online Library</span></a>
+		        <ul>
+			        <li><a href="AddOnlineLibrary.aspx">Add Data in Online Library</a></li>
+			        <li><a href="EditOnlineLibrary.aspx">Edit Data in online Library</a></li>
+			       
+		        </ul></li>
+		        <li><a href="#"><span>Exam Schedule/Result</span></a>
+		        <ul>
+			        <li><a href="AddExamRelated.aspx">Add Exam Schedule/Result</a></li>
+			        <li><a href="EditExamRelated.aspx">Edit Exam Schedule/Result</a></li>
+			        
+		        </ul></li>
+		        <%--<li><a href="#"><span>Exam Result</span></a>
+		        <ul>
+			        <li><a href="#">Add Exam Result</a></li>
+			        <li><a href="#">Edit Exam Result</a></li>
+			        
+		        </ul></li>--%>
+	        </ul></li>
+	        <li class="topmenu" id="dir"><a href="#" style="height:18px;line-height:18px;"><span>Directory</span></a>
+	        <ul>
+		        <li><a href="AlumniDirectory.aspx">Alumni</a></li>
+		        <li><a href="FacultyDirectory.aspx">Faculty</a></li>
+		        <li><a href="StudentDirectory.aspx">Student</a></li>
+		        <li><a href="SubjectDirectory.aspx">Subject</a></li>
+		        <li><a href="ViewEventRegister.aspx">Event Registrations</a></li>
+	        </ul></li>
+	        <li class="toplast"><a href="Feedback.aspx" style="height:18px;line-height:18px;">View Feedback</a></li>
+            </ul>
+            <!-- End css3menu.com BODY section -->
+        </div>
+        </div>
+
+        <div class="middle2">
+            <div class="content2">
+            <asp:ContentPlaceHolder ID="AdminContent" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+        </div>
+   
+        <div class="footer">
+            <span class="copyright">Copyright ©2013 Unity College</span> 
+            <span class="footerimg">
+            <img id="Img1" alt="footerimg" src="~/Includes/Images/unity.ico" width="20" height="20" runat="server" />
+            <asp:Label ID="lblU" runat="server" ForeColor="Yellow" Text="U"></asp:Label>
+            <asp:Label ID="lbln" runat="server" ForeColor="Blue" Text="n"></asp:Label>
+            <asp:Label ID="lblI" runat="server" ForeColor="Lime" Text="I"></asp:Label>
+            <asp:Label ID="lblt" runat="server" ForeColor="Red" Text="t"></asp:Label>
+            <asp:Label ID="lblY" runat="server" ForeColor="#6600CC" Text="Y"></asp:Label>
+            </span>
+        </div>
+   
+    </div>
+    
+    </form>
+</body>
+</html>
+

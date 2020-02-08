@@ -1,0 +1,416 @@
+﻿.table
+{
+    height:800px;
+   background-color:Silver;
+   overflow:auto;
+   border:0px;
+   border-collapse:collapse;
+   padding:0px;
+   background-image:url('../Images/img5.jpg');
+     
+}
+
+.table .header1
+{
+    text-align:center;
+    font-size:xx-large;
+    color:Red;
+    background-color:#6917a3;
+    font-style:italic;
+    font-family:Shruti;
+      background-image:url('../Images/bac.jpeg');
+
+}
+
+.homestyle
+{
+ width:100%;
+ border:0px;
+ border-collapse:collapse;
+ padding:0px;   
+}
+
+.table .middle .content
+{
+    width:85%;
+    height:730px;
+    overflow:auto;
+    vertical-align:top;
+}
+
+.table .middle .cal
+{
+    width:15%;
+    height:700px;
+    overflow:auto;
+    vertical-align:top;
+    background-color:#b6b6b6;
+       background-image:url('../Images/img5.jpg');
+}
+
+.table .middle .cal .lblProverb
+{
+    color: 	#4169E1;
+    vertical-align:text-bottom;
+    font-size:large;
+}
+
+.table .footer
+{
+    text-align:center;
+    font-size:medium;
+    color:#A52A2A;
+    background-color:#C48189;
+}
+
+.table .footer .copyright
+{
+   
+}
+
+.table .footer .footerimg
+{
+    padding-right:80px;
+    float:right;
+}
+
+.lblNews
+{
+    font-size:large;
+    color:White;
+    height:50px;
+    text-align:center;
+    font-size:x-large;
+}
+
+.dynnewsheader
+{
+    color:#808000;
+    padding-left:40%;
+    vertical-align:top;
+    font-size:x-large;
+    background-color:#E6E6FA;
+    font-weight:bold;
+}
+
+.dynnewscontent
+{
+    height:400px;
+    vertical-align:top;
+    font-size:large;
+}
+
+.homeevent
+{
+    height:130px; 
+}
+
+.homeevent a
+{
+   font-weight:bold;
+    font-size:medium;
+    color:Navy;
+    text-decoration:none;
+}
+
+.homeevent a:hover
+{
+   color:Red;
+    text-decoration:none;
+}
+
+.homenews
+{
+    vertical-align:top;
+}
+
+.homenews a
+{
+    font-weight:bold;
+    font-size:medium;
+    color:Navy;
+    text-decoration:none;
+}
+
+.homenews a:hover
+{
+    color:Red;
+    text-decoration:none;
+}
+
+.eventheader
+{
+    vertical-align:top;
+    font-size:x-large;
+    font-weight:bold;
+    background-color:#E6E6FA;
+    color:#808000;
+}
+
+.eventcontent
+{
+   
+    vertical-align:top;
+    font-size:large;
+}
+
+.btnEventRegister1
+{
+    background-color:#FFDEAD;
+    text-align:center; 
+    font-size:medium; 
+    color: 	#A0522D;
+    margin-right: 0px;
+}
+
+.btnEventRegister
+{ 
+    background:#0066A2;
+    color:white;
+    border-style:outset;
+    border-color:#0066A2;
+    height:30px;
+    width:100px;
+    font: bold 15px arial,sans-serif;
+}
+
+.btnEventRegister:hover
+{
+    color:Black;
+    
+} 
+
+.lblRegisterEvent
+{
+    padding-left:40%;
+    font-size:x-large;
+    font-weight:bold;   
+}
+
+.cl td a:link
+{
+    text-decoration:none;
+}
+
+.jquerydateformat {
+	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+
+}
+
+.EventRegisterlbl
+{
+    font-size:large;
+    color:#d2691E;
+
+}
+
+.registereventbtn
+{
+ padding-left:100px; 
+}
+
+.ValueProverb
+{
+    color:#FFD700;
+    font-size:large;
+}
+
+.valuehead
+{
+    font-size:x-large;    
+}
+
+.principaltext
+{
+
+    font-size:x-large;
+}
+
+.text
+{
+    font-size:large;
+}
+
+.adminlbl
+{
+    width:170px;
+    text-align:left;
+}
+
+.adminheader
+{
+    height:20px;
+    text-align:center;
+}
+
+.content2
+{
+    height:500px;
+    
+}
+
+.table2
+{
+
+   background-color:Silver;
+   overflow:auto;
+   border:0px;
+   border-collapse:collapse;
+   padding:0px;
+      background-image:url('../Images/img5.jpg');
+}
+
+.table2 .header2
+{
+    text-align:center;
+    font-size:xx-large;
+    color:Red;
+    background-color:#6917a3;
+    font-style:italic;
+    font-family:Shruti;
+       background-image:url('../Images/bac.jpeg');
+}
+
+
+.table2 .middle2 .content2
+{
+    height:740px;
+    overflow:auto;
+    vertical-align:top;
+}
+
+.table2 .footer
+{
+    text-align:center;
+    font-size:medium;
+    color:#A52A2A;
+    background-color:#C48189;
+    height:30px;
+}
+
+.table2 .footer .footerimg
+{
+    padding-right:80px;
+    float:right;
+}
+
+
+.header
+{
+    background-color:#CCCC00;
+    border-color:#CCCC00;
+    border-style:solid;
+    font-weight:bold;
+    font-style:italic;
+    font-family:Palatino Linotype;
+    font-size:x-large;
+    color:#CC0000; 
+}
+
+.logout 
+{
+    color:Red;
+}
+
+.editprofile
+{
+    float:left;
+    width:20%;
+    height:100%;
+    border-right-width:2px;
+    border-right-style:solid;
+}
+
+.profile
+{
+    font-size:x-large;
+    text-align:center;
+}
+
+.centrealign
+{
+    padding-left:30%;
+}
+   
+.communicate a
+{
+    color:#003300;
+    text-decoration:none;
+    font-size:large;
+} 
+
+.communicate a:hover
+{
+    text-decoration:underline;
+}
+
+.passchange
+{
+    background-image:url('../Images/img5.jpg');
+}
+
+.color
+{
+    color:Orange;
+    font-weight:bold;
+}
+
+
+.notify a
+{
+    text-decoration:none;
+    color:Red;
+    font-size:large;
+}
+
+.notify:hover
+{
+    background-color:Blue;
+}
+
+.ol a
+{
+    color:White;
+    font-size:large;
+    text-decoration:none;
+}
+
+.ol a:hover
+{
+    color:Blue;
+    text-decoration:underline;
+}
+
+.dirlbl
+{
+    width:130px;
+}
+
+.lbl
+{
+    color:#800000;
+    font-size:large;
+}
+
+.loginhead
+{
+    color:White;
+    font-size:large;
+}
+
+.largelbl
+{
+    width:220px;
+}
+
+.head
+{
+    color:Orange;
+    font-size:xx-large;
+    font-weight:bold;
+}
+
+.label
+{
+    color:Red;
+}

@@ -1,0 +1,1716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="unitycollegeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="unitycollegeModelStoreContainer">
+          <EntitySet Name="Alumni" EntityType="unitycollegeModel.Store.Alumni" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CommunicateFaculty" EntityType="unitycollegeModel.Store.CommunicateFaculty" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Courses" EntityType="unitycollegeModel.Store.Courses" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Event" EntityType="unitycollegeModel.Store.Event" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExamDetailType" EntityType="unitycollegeModel.Store.ExamDetailType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExamRelated" EntityType="unitycollegeModel.Store.ExamRelated" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExtraCourseRegister" EntityType="unitycollegeModel.Store.ExtraCourseRegister" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExtraCourses" EntityType="unitycollegeModel.Store.ExtraCourses" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Feedback" EntityType="unitycollegeModel.Store.Feedback" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FeedbackType" EntityType="unitycollegeModel.Store.FeedbackType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="News" EntityType="unitycollegeModel.Store.News" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OnlineLibrary" EntityType="unitycollegeModel.Store.OnlineLibrary" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlacementsList" EntityType="unitycollegeModel.Store.PlacementsList" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlacementType" EntityType="unitycollegeModel.Store.PlacementType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RegisterEvent" EntityType="unitycollegeModel.Store.RegisterEvent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles" EntityType="unitycollegeModel.Store.Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StudentCourse" EntityType="unitycollegeModel.Store.StudentCourse" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SubjectFaculty" EntityType="unitycollegeModel.Store.SubjectFaculty" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Subjects" EntityType="unitycollegeModel.Store.Subjects" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="unitycollegeModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="unitycollegeModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__Alumni__cid__3A4CA8FD" Association="unitycollegeModel.Store.FK__Alumni__cid__3A4CA8FD">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Alumni" EntitySet="Alumni" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumni__rid__3B40CD36" Association="unitycollegeModel.Store.FK__Alumni__rid__3B40CD36">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Alumni" EntitySet="Alumni" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Communica__admin__339FAB6E" Association="unitycollegeModel.Store.FK__Communica__admin__339FAB6E">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CommunicateFaculty" EntitySet="CommunicateFaculty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Communica__fromu__31B762FC" Association="unitycollegeModel.Store.FK__Communica__fromu__31B762FC">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CommunicateFaculty" EntitySet="CommunicateFaculty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Communica__touid__32AB8735" Association="unitycollegeModel.Store.FK__Communica__touid__32AB8735">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CommunicateFaculty" EntitySet="CommunicateFaculty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExamRelat__edtid__6EF57B66" Association="unitycollegeModel.Store.FK__ExamRelat__edtid__6EF57B66">
+            <End Role="ExamDetailType" EntitySet="ExamDetailType" />
+            <End Role="ExamRelated" EntitySet="ExamRelated" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExamRelated__cid__6E01572D" Association="unitycollegeModel.Store.FK__ExamRelated__cid__6E01572D">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="ExamRelated" EntitySet="ExamRelated" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExtraCours__ecid__25518C17" Association="unitycollegeModel.Store.FK__ExtraCours__ecid__25518C17">
+            <End Role="ExtraCourses" EntitySet="ExtraCourses" />
+            <End Role="ExtraCourseRegister" EntitySet="ExtraCourseRegister" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExtraCourse__uid__2645B050" Association="unitycollegeModel.Store.FK__ExtraCourse__uid__2645B050">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ExtraCourseRegister" EntitySet="ExtraCourseRegister" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Feedback__adminu__43D61337" Association="unitycollegeModel.Store.FK__Feedback__adminu__43D61337">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Feedback" EntitySet="Feedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Feedback__ftid__42E1EEFE" Association="unitycollegeModel.Store.FK__Feedback__ftid__42E1EEFE">
+            <End Role="FeedbackType" EntitySet="FeedbackType" />
+            <End Role="Feedback" EntitySet="Feedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OnlineLibra__cid__628FA481" Association="unitycollegeModel.Store.FK__OnlineLibra__cid__628FA481">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="OnlineLibrary" EntitySet="OnlineLibrary" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Placements__ptid__5CD6CB2B" Association="unitycollegeModel.Store.FK__Placements__ptid__5CD6CB2B">
+            <End Role="PlacementType" EntitySet="PlacementType" />
+            <End Role="PlacementsList" EntitySet="PlacementsList" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RegisterEve__eid__5165187F" Association="unitycollegeModel.Store.FK__RegisterEve__eid__5165187F">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="RegisterEvent" EntitySet="RegisterEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentCour__cid__208CD6FA" Association="unitycollegeModel.Store.FK__StudentCour__cid__208CD6FA">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="StudentCourse" EntitySet="StudentCourse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentCour__uid__1F98B2C1" Association="unitycollegeModel.Store.FK__StudentCour__uid__1F98B2C1">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="StudentCourse" EntitySet="StudentCourse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SubjectFacu__sid__498EEC8D" Association="unitycollegeModel.Store.FK__SubjectFacu__sid__498EEC8D">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="SubjectFaculty" EntitySet="SubjectFaculty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SubjectFacu__uid__4A8310C6" Association="unitycollegeModel.Store.FK__SubjectFacu__uid__4A8310C6">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="SubjectFaculty" EntitySet="SubjectFaculty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Subjects__cid__19DFD96B" Association="unitycollegeModel.Store.FK__Subjects__cid__19DFD96B">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Subjects" EntitySet="Subjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Users__rid__1332DBDC" Association="unitycollegeModel.Store.FK__Users__rid__1332DBDC">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Users__udept__151B244E" Association="unitycollegeModel.Store.FK__Users__udept__151B244E">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="fk_cid" Association="unitycollegeModel.Store.fk_cid">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="PlacementsList" EntitySet="PlacementsList" />
+          </AssociationSet>
+          <AssociationSet Name="fk_sid" Association="unitycollegeModel.Store.fk_sid">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="OnlineLibrary" EntitySet="OnlineLibrary" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Alumni">
+          <Key>
+            <PropertyRef Name="aid" />
+          </Key>
+          <Property Name="aid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="aname" Type="varchar" Nullable="false" MaxLength="70" />
+          <Property Name="aemail" Type="varchar" Nullable="false" MaxLength="70" />
+          <Property Name="acompany" Type="varchar" MaxLength="70" />
+          <Property Name="apassyear" Type="int" Nullable="false" />
+          <Property Name="cid" Type="int" />
+          <Property Name="rid" Type="int" />
+          <Property Name="aworkprofile" Type="text" />
+          <Property Name="avalid" Type="bit" />
+        </EntityType>
+        <EntityType Name="CommunicateFaculty">
+          <Key>
+            <PropertyRef Name="cfid" />
+          </Key>
+          <Property Name="cfid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="fromuid" Type="int" />
+          <Property Name="touid" Type="int" />
+          <Property Name="adminuid" Type="int" />
+          <Property Name="cfcontent" Type="varchar" MaxLength="150" />
+          <Property Name="cfunread" Type="bit" />
+          <Property Name="cfdatetime" Type="datetime" Nullable="false" />
+          <Property Name="cfvalid" Type="bit" />
+        </EntityType>
+        <EntityType Name="Courses">
+          <Key>
+            <PropertyRef Name="cid" />
+          </Key>
+          <Property Name="cid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cname" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="cduration" Type="int" Nullable="false" />
+          <Property Name="cdescription" Type="text" />
+          <Property Name="csemesters" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="cstartyear" Type="date" Nullable="false" />
+          <Property Name="caccreditation" Type="varchar" MaxLength="50" />
+          <Property Name="cvalid" Type="bit" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="eid" />
+          </Key>
+          <Property Name="eid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ename" Type="varchar" MaxLength="100" />
+          <Property Name="eshortdesc" Type="text" />
+          <Property Name="elongdesc" Type="text" />
+          <Property Name="estartdatetime" Type="datetime" Nullable="false" />
+          <Property Name="eendatetime" Type="datetime" Nullable="false" />
+          <Property Name="elocation" Type="varchar" MaxLength="80" />
+          <Property Name="eseats" Type="int" />
+          <Property Name="evalid" Type="bit" />
+          <Property Name="eseatsavailable" Type="int" />
+        </EntityType>
+        <EntityType Name="ExamDetailType">
+          <Key>
+            <PropertyRef Name="edtid" />
+          </Key>
+          <Property Name="edtid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="edtname" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ExamRelated">
+          <Key>
+            <PropertyRef Name="erid" />
+          </Key>
+          <Property Name="erid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cid" Type="int" />
+          <Property Name="ersem" Type="int" Nullable="false" />
+          <Property Name="erfile" Type="varbinary(max)" />
+          <Property Name="eryear" Type="date" Nullable="false" />
+          <Property Name="edtid" Type="int" />
+          <Property Name="ervalid" Type="bit" />
+          <Property Name="erdesc" Type="text" />
+        </EntityType>
+        <EntityType Name="ExtraCourseRegister">
+          <Key>
+            <PropertyRef Name="recid" />
+          </Key>
+          <Property Name="recid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ecid" Type="int" />
+          <Property Name="uid" Type="int" />
+          <Property Name="recdate" Type="date" Nullable="false" />
+          <Property Name="recstartdate" Type="date" Nullable="false" />
+          <Property Name="recenddate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExtraCourses">
+          <Key>
+            <PropertyRef Name="ecid" />
+          </Key>
+          <Property Name="ecid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ecname" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ecduration" Type="int" Nullable="false" />
+          <Property Name="ecdescription" Type="text" />
+          <Property Name="ecbenefits" Type="text" />
+          <Property Name="ecseats" Type="int" />
+          <Property Name="ecvalid" Type="bit" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="fid" />
+          </Key>
+          <Property Name="fid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ftid" Type="int" />
+          <Property Name="fname" Type="varchar" MaxLength="80" />
+          <Property Name="femail" Type="varchar" MaxLength="80" />
+          <Property Name="fcontent" Type="text" />
+          <Property Name="adminuid" Type="int" />
+          <Property Name="fsubject" Type="varchar" MaxLength="100" />
+          <Property Name="fdate" Type="datetime" />
+          <Property Name="funread" Type="bit" />
+        </EntityType>
+        <EntityType Name="FeedbackType">
+          <Key>
+            <PropertyRef Name="ftid" />
+          </Key>
+          <Property Name="ftid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ftname" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="nid" />
+          </Key>
+          <Property Name="nid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nheader" Type="varchar" MaxLength="100" />
+          <Property Name="nshortdesc" Type="text" />
+          <Property Name="nlongdesc" Type="text" />
+          <Property Name="ndatetime" Type="datetime" Nullable="false" />
+          <Property Name="nvalid" Type="bit" />
+        </EntityType>
+        <EntityType Name="OnlineLibrary">
+          <Key>
+            <PropertyRef Name="olid" />
+          </Key>
+          <Property Name="olid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="oltname" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="oldesc" Type="text" />
+          <Property Name="olfile" Type="varbinary(max)" />
+          <Property Name="cid" Type="int" />
+          <Property Name="olvalid" Type="bit" />
+          <Property Name="csem" Type="int" />
+          <Property Name="sid" Type="int" />
+        </EntityType>
+        <EntityType Name="PlacementsList">
+          <Key>
+            <PropertyRef Name="pid" />
+          </Key>
+          <Property Name="pid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pcompanyname" Type="text" />
+          <Property Name="pdate" Type="datetime" />
+          <Property Name="ptid" Type="int" />
+          <Property Name="pfile" Type="varbinary(max)" />
+          <Property Name="pjobtitle" Type="varchar" MaxLength="80" />
+          <Property Name="pvalid" Type="bit" />
+          <Property Name="pwebsite" Type="varchar" MaxLength="100" />
+          <Property Name="pinterviewlocation" Type="varchar" MaxLength="100" />
+          <Property Name="cid" Type="int" />
+          <Property Name="peligibility" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PlacementType">
+          <Key>
+            <PropertyRef Name="ptid" />
+          </Key>
+          <Property Name="ptid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ptname" Type="varchar" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="RegisterEvent">
+          <Key>
+            <PropertyRef Name="reid" />
+          </Key>
+          <Property Name="reid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="eid" Type="int" />
+          <Property Name="refullname" Type="varchar" MaxLength="80" />
+          <Property Name="reemail" Type="varchar" Nullable="false" MaxLength="70" />
+          <Property Name="recollege" Type="text" />
+          <Property Name="recourse" Type="text" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="rid" />
+          </Key>
+          <Property Name="rid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="rname" Type="varchar" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="StudentCourse">
+          <Key>
+            <PropertyRef Name="scid" />
+          </Key>
+          <Property Name="scid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="uid" Type="int" />
+          <Property Name="cid" Type="int" />
+          <Property Name="scStartdate" Type="date" Nullable="false" />
+          <Property Name="scEnddate" Type="date" Nullable="false" />
+          <Property Name="scCurrentsem" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubjectFaculty">
+          <Key>
+            <PropertyRef Name="sfid" />
+          </Key>
+          <Property Name="sfid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sid" Type="int" />
+          <Property Name="uid" Type="int" />
+          <Property Name="sfstartdate" Type="date" />
+          <Property Name="sfvalid" Type="bit" />
+        </EntityType>
+        <EntityType Name="Subjects">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sname" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="cid" Type="int" />
+          <Property Name="ssem" Type="int" Nullable="false" />
+          <Property Name="svalid" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="uFullname" Type="varchar" Nullable="false" MaxLength="70" />
+          <Property Name="username" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="upassword" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="uvalid" Type="bit" />
+          <Property Name="uemail" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="uContact" Type="bigint" Nullable="false" />
+          <Property Name="uInterest" Type="varchar" MaxLength="70" />
+          <Property Name="rid" Type="int" />
+          <Property Name="ugs" Type="bit" />
+          <Property Name="udept" Type="int" />
+        </EntityType>
+        <Association Name="FK__Alumni__cid__3A4CA8FD">
+          <End Role="Courses" Type="unitycollegeModel.Store.Courses" Multiplicity="0..1" />
+          <End Role="Alumni" Type="unitycollegeModel.Store.Alumni" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="cid" />
+            </Principal>
+            <Dependent Role="Alumni">
+              <PropertyRef Name="cid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Alumni__rid__3B40CD36">
+          <End Role="Roles" Type="unitycollegeModel.Store.Roles" Multiplicity="0..1" />
+          <End Role="Alumni" Type="unitycollegeModel.Store.Alumni" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="rid" />
+            </Principal>
+            <Dependent Role="Alumni">
+              <PropertyRef Name="rid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Communica__admin__339FAB6E">
+          <End Role="Users" Type="unitycollegeModel.Store.Users" Multiplicity="0..1" />
+          <End Role="CommunicateFaculty" Type="unitycollegeModel.Store.CommunicateFaculty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="CommunicateFaculty">
+              <PropertyRef Name="adminuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Communica__fromu__31B762FC">
+          <End Role="Users" Type="unitycollegeModel.Store.Users" Multiplicity="0..1" />
+          <End Role="CommunicateFaculty" Type="unitycollegeModel.Store.CommunicateFaculty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="CommunicateFaculty">
+              <PropertyRef Name="fromuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Communica__touid__32AB8735">
+          <End Role="Users" Type="unitycollegeModel.Store.Users" Multiplicity="0..1" />
+          <End Role="CommunicateFaculty" Type="unitycollegeModel.Store.CommunicateFaculty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="CommunicateFaculty">
+              <PropertyRef Name="touid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ExamRelat__edtid__6EF57B66">
+          <End Role="ExamDetailType" Type="unitycollegeModel.Store.ExamDetailType" Multiplicity="0..1" />
+          <End Role="ExamRelated" Type="unitycollegeModel.Store.ExamRelated" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ExamDetailType">
+              <PropertyRef Name="edtid" />
+            </Principal>
+            <Dependent Role="ExamRelated">
+              <PropertyRef Name="edtid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ExamRelated__cid__6E01572D">
+          <End Role="Courses" Type="unitycollegeModel.Store.Courses" Multiplicity="0..1" />
+          <End Role="ExamRelated" Type="unitycollegeModel.Store.ExamRelated" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="cid" />
+            </Principal>
+            <Dependent Role="ExamRelated">
+              <PropertyRef Name="cid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ExtraCours__ecid__25518C17">
+          <End Role="ExtraCourses" Type="unitycollegeModel.Store.ExtraCourses" Multiplicity="0..1" />
+          <End Role="ExtraCourseRegister" Type="unitycollegeModel.Store.ExtraCourseRegister" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ExtraCourses">
+              <PropertyRef Name="ecid" />
+            </Principal>
+            <Dependent Role="ExtraCourseRegister">
+              <PropertyRef Name="ecid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ExtraCourse__uid__2645B050">
+          <End Role="Users" Type="unitycollegeModel.Store.Users" Multiplicity="0..1" />
+          <End Role="ExtraCourseRegister" Type="unitycollegeModel.Store.ExtraCourseRegister" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="ExtraCourseRegister">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Feedback__adminu__43D61337">
+          <End Role="Users" Type="unitycollegeModel.Store.Users" Multiplicity="0..1" />
+          <End Role="Feedback" Type="unitycollegeModel.Store.Feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="Feedback">
+              <PropertyRef Name="adminuid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Feedback__ftid__42E1EEFE">
+          <End Role="FeedbackType" Type="unitycollegeModel.Store.FeedbackType" Multiplicity="0..1" />
+          <End Role="Feedback" Type="unitycollegeModel.Store.Feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FeedbackType">
+              <PropertyRef Name="ftid" />
+            </Principal>
+            <Dependent Role="Feedback">
+              <PropertyRef Name="ftid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OnlineLibra__cid__628FA481">
+          <End Role="Courses" Type="unitycollegeModel.Store.Courses" Multiplicity="0..1" />
+          <End Role="OnlineLibrary" Type="unitycollegeModel.Store.OnlineLibrary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="cid" />
+            </Principal>
+            <Dependent Role="OnlineLibrary">
+              <PropertyRef Name="cid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Placements__ptid__5CD6CB2B">
+          <End Role="PlacementType" Type="unitycollegeModel.Store.PlacementType" Multiplicity="0..1" />
+          <End Role="PlacementsList" Type="unitycollegeModel.Store.PlacementsList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlacementType">
+              <PropertyRef Name="ptid" />
+            </Principal>
+            <Dependent Role="PlacementsList">
+              <PropertyRef Name="ptid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RegisterEve__eid__5165187F">
+          <End Role="Event" Type="unitycollegeModel.Store.Event" Multiplicity="0..1" />
+          <End Role="RegisterEvent" Type="unitycollegeModel.Store.RegisterEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Event">
+              <PropertyRef Name="eid" />
+            </Principal>
+            <Dependent Role="RegisterEvent">
+              <PropertyRef Name="eid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StudentCour__cid__208CD6FA">
+          <End Role="Courses" Type="unitycollegeModel.Store.Courses" Multiplicity="0..1" />
+          <End Role="StudentCourse" Type="unitycollegeModel.Store.StudentCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="cid" />
+            </Principal>
+            <Dependent Role="StudentCourse">
+              <PropertyRef Name="cid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StudentCour__uid__1F98B2C1">
+          <End Role="Users" Type="unitycollegeModel.Store.Users" Multiplicity="0..1" />
+          <End Role="StudentCourse" Type="unitycollegeModel.Store.StudentCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="StudentCourse">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SubjectFacu__sid__498EEC8D">
+          <End Role="Subjects" Type="unitycollegeModel.Store.Subjects" Multiplicity="0..1" />
+          <End Role="SubjectFaculty" Type="unitycollegeModel.Store.SubjectFaculty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="sid" />
+            </Principal>
+            <Dependent Role="SubjectFaculty">
+              <PropertyRef Name="sid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SubjectFacu__uid__4A8310C6">
+          <End Role="Users" Type="unitycollegeModel.Store.Users" Multiplicity="0..1" />
+          <End Role="SubjectFaculty" Type="unitycollegeModel.Store.SubjectFaculty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="uid" />
+            </Principal>
+            <Dependent Role="SubjectFaculty">
+              <PropertyRef Name="uid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Subjects__cid__19DFD96B">
+          <End Role="Courses" Type="unitycollegeModel.Store.Courses" Multiplicity="0..1" />
+          <End Role="Subjects" Type="unitycollegeModel.Store.Subjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="cid" />
+            </Principal>
+            <Dependent Role="Subjects">
+              <PropertyRef Name="cid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Users__rid__1332DBDC">
+          <End Role="Roles" Type="unitycollegeModel.Store.Roles" Multiplicity="0..1" />
+          <End Role="Users" Type="unitycollegeModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="rid" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="rid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Users__udept__151B244E">
+          <End Role="Courses" Type="unitycollegeModel.Store.Courses" Multiplicity="0..1" />
+          <End Role="Users" Type="unitycollegeModel.Store.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="cid" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="udept" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_cid">
+          <End Role="Courses" Type="unitycollegeModel.Store.Courses" Multiplicity="0..1" />
+          <End Role="PlacementsList" Type="unitycollegeModel.Store.PlacementsList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="cid" />
+            </Principal>
+            <Dependent Role="PlacementsList">
+              <PropertyRef Name="cid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_sid">
+          <End Role="Subjects" Type="unitycollegeModel.Store.Subjects" Multiplicity="0..1" />
+          <End Role="OnlineLibrary" Type="unitycollegeModel.Store.OnlineLibrary" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subjects">
+              <PropertyRef Name="sid" />
+            </Principal>
+            <Dependent Role="OnlineLibrary">
+              <PropertyRef Name="sid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="unitycollegeModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="unitycollegeEntities1">
+          <EntitySet Name="Alumni" EntityType="unitycollegeModel.Alumni" />
+          <EntitySet Name="CommunicateFaculty" EntityType="unitycollegeModel.CommunicateFaculty" />
+          <EntitySet Name="Courses" EntityType="unitycollegeModel.Courses" />
+          <EntitySet Name="Event" EntityType="unitycollegeModel.Event" />
+          <EntitySet Name="ExamDetailType" EntityType="unitycollegeModel.ExamDetailType" />
+          <EntitySet Name="ExamRelated" EntityType="unitycollegeModel.ExamRelated" />
+          <EntitySet Name="ExtraCourseRegister" EntityType="unitycollegeModel.ExtraCourseRegister" />
+          <EntitySet Name="ExtraCourses" EntityType="unitycollegeModel.ExtraCourses" />
+          <EntitySet Name="Feedback" EntityType="unitycollegeModel.Feedback" />
+          <EntitySet Name="FeedbackType" EntityType="unitycollegeModel.FeedbackType" />
+          <EntitySet Name="News" EntityType="unitycollegeModel.News" />
+          <EntitySet Name="OnlineLibrary" EntityType="unitycollegeModel.OnlineLibrary" />
+          <EntitySet Name="PlacementsList" EntityType="unitycollegeModel.PlacementsList" />
+          <EntitySet Name="PlacementType" EntityType="unitycollegeModel.PlacementType" />
+          <EntitySet Name="RegisterEvent" EntityType="unitycollegeModel.RegisterEvent" />
+          <EntitySet Name="Roles" EntityType="unitycollegeModel.Roles" />
+          <EntitySet Name="StudentCourse" EntityType="unitycollegeModel.StudentCourse" />
+          <EntitySet Name="Subjects" EntityType="unitycollegeModel.Subjects" />
+          <EntitySet Name="sysdiagrams" EntityType="unitycollegeModel.sysdiagrams" />
+          <EntitySet Name="Users" EntityType="unitycollegeModel.Users" />
+          <AssociationSet Name="FK__Alumni__cid__36B12243" Association="unitycollegeModel.FK__Alumni__cid__36B12243">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Alumni" EntitySet="Alumni" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Alumni__rid__37A5467C" Association="unitycollegeModel.FK__Alumni__rid__37A5467C">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Alumni" EntitySet="Alumni" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Communica__admin__339FAB6E" Association="unitycollegeModel.FK__Communica__admin__339FAB6E">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CommunicateFaculty" EntitySet="CommunicateFaculty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Communica__fromu__31B762FC" Association="unitycollegeModel.FK__Communica__fromu__31B762FC">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CommunicateFaculty" EntitySet="CommunicateFaculty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Communica__touid__32AB8735" Association="unitycollegeModel.FK__Communica__touid__32AB8735">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CommunicateFaculty" EntitySet="CommunicateFaculty" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExamRelated__cid__6E01572D" Association="unitycollegeModel.FK__ExamRelated__cid__6E01572D">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="ExamRelated" EntitySet="ExamRelated" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OnlineLibra__cid__628FA481" Association="unitycollegeModel.FK__OnlineLibra__cid__628FA481">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="OnlineLibrary" EntitySet="OnlineLibrary" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentCour__cid__208CD6FA" Association="unitycollegeModel.FK__StudentCour__cid__208CD6FA">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="StudentCourse" EntitySet="StudentCourse" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Subjects__cid__19DFD96B" Association="unitycollegeModel.FK__Subjects__cid__19DFD96B">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Subjects" EntitySet="Subjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Users__udept__151B244E" Association="unitycollegeModel.FK__Users__udept__151B244E">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RegisterEve__eid__5165187F" Association="unitycollegeModel.FK__RegisterEve__eid__5165187F">
+            <End Role="Event" EntitySet="Event" />
+            <End Role="RegisterEvent" EntitySet="RegisterEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExamRelat__edtid__6EF57B66" Association="unitycollegeModel.FK__ExamRelat__edtid__6EF57B66">
+            <End Role="ExamDetailType" EntitySet="ExamDetailType" />
+            <End Role="ExamRelated" EntitySet="ExamRelated" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExtraCours__ecid__25518C17" Association="unitycollegeModel.FK__ExtraCours__ecid__25518C17">
+            <End Role="ExtraCourses" EntitySet="ExtraCourses" />
+            <End Role="ExtraCourseRegister" EntitySet="ExtraCourseRegister" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ExtraCourse__uid__2645B050" Association="unitycollegeModel.FK__ExtraCourse__uid__2645B050">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ExtraCourseRegister" EntitySet="ExtraCourseRegister" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Feedback__adminu__2CF2ADDF" Association="unitycollegeModel.FK__Feedback__adminu__2CF2ADDF">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Feedback" EntitySet="Feedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Feedback__ftid__2B0A656D" Association="unitycollegeModel.FK__Feedback__ftid__2B0A656D">
+            <End Role="FeedbackType" EntitySet="FeedbackType" />
+            <End Role="Feedback" EntitySet="Feedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Placements__ptid__5CD6CB2B" Association="unitycollegeModel.FK__Placements__ptid__5CD6CB2B">
+            <End Role="PlacementType" EntitySet="PlacementType" />
+            <End Role="PlacementsList" EntitySet="PlacementsList" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Users__rid__1332DBDC" Association="unitycollegeModel.FK__Users__rid__1332DBDC">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StudentCour__uid__1F98B2C1" Association="unitycollegeModel.FK__StudentCour__uid__1F98B2C1">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="StudentCourse" EntitySet="StudentCourse" />
+          </AssociationSet>
+          <AssociationSet Name="fk_cid" Association="unitycollegeModel.fk_cid">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="PlacementsList" EntitySet="PlacementsList" /></AssociationSet>
+          <AssociationSet Name="fk_sid" Association="unitycollegeModel.fk_sid">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="OnlineLibrary" EntitySet="OnlineLibrary" /></AssociationSet>
+          <EntitySet Name="SubjectFaculty" EntityType="unitycollegeModel.SubjectFaculty" />
+          <AssociationSet Name="FK__SubjectFacu__sid__498EEC8D" Association="unitycollegeModel.FK__SubjectFacu__sid__498EEC8D">
+            <End Role="Subjects" EntitySet="Subjects" />
+            <End Role="SubjectFaculty" EntitySet="SubjectFaculty" /></AssociationSet>
+          <AssociationSet Name="FK__SubjectFacu__uid__4A8310C6" Association="unitycollegeModel.FK__SubjectFacu__uid__4A8310C6">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="SubjectFaculty" EntitySet="SubjectFaculty" /></AssociationSet></EntityContainer>
+        <EntityType Name="Alumni">
+          <Key>
+            <PropertyRef Name="aid" />
+          </Key>
+          <Property Name="aid" Type="Int32" Nullable="false" />
+          <Property Name="aname" Type="String" Nullable="false" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="aemail" Type="String" Nullable="false" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="acompany" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="apassyear" Type="Int32" Nullable="false" />
+          <Property Name="aworkprofile" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="avalid" Type="Boolean" />
+          <NavigationProperty Name="Courses" Relationship="unitycollegeModel.FK__Alumni__cid__36B12243" FromRole="Alumni" ToRole="Courses" />
+          <NavigationProperty Name="Roles" Relationship="unitycollegeModel.FK__Alumni__rid__37A5467C" FromRole="Alumni" ToRole="Roles" />
+        </EntityType>
+        <EntityType Name="CommunicateFaculty">
+          <Key>
+            <PropertyRef Name="cfid" />
+          </Key>
+          <Property Name="cfid" Type="Int32" Nullable="false" />
+          <Property Name="cfcontent" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="cfunread" Type="Boolean" />
+          <Property Name="cfdatetime" Type="DateTime" Nullable="false" />
+          <Property Name="cfvalid" Type="Boolean" />
+          <NavigationProperty Name="Users" Relationship="unitycollegeModel.FK__Communica__admin__339FAB6E" FromRole="CommunicateFaculty" ToRole="Users" />
+          <NavigationProperty Name="Users1" Relationship="unitycollegeModel.FK__Communica__fromu__31B762FC" FromRole="CommunicateFaculty" ToRole="Users" />
+          <NavigationProperty Name="Users2" Relationship="unitycollegeModel.FK__Communica__touid__32AB8735" FromRole="CommunicateFaculty" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Courses">
+          <Key>
+            <PropertyRef Name="cid" />
+          </Key>
+          <Property Name="cid" Type="Int32" Nullable="false" />
+          <Property Name="cname" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="cduration" Type="Int32" Nullable="false" />
+          <Property Name="cdescription" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="csemesters" Type="Int32" />
+          <Property Name="cstartyear" Type="DateTime" Nullable="false" />
+          <Property Name="caccreditation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="cvalid" Type="Boolean" />
+          <NavigationProperty Name="Alumni" Relationship="unitycollegeModel.FK__Alumni__cid__36B12243" FromRole="Courses" ToRole="Alumni" />
+          <NavigationProperty Name="ExamRelated" Relationship="unitycollegeModel.FK__ExamRelated__cid__6E01572D" FromRole="Courses" ToRole="ExamRelated" />
+          <NavigationProperty Name="OnlineLibrary" Relationship="unitycollegeModel.FK__OnlineLibra__cid__628FA481" FromRole="Courses" ToRole="OnlineLibrary" />
+          <NavigationProperty Name="StudentCourse" Relationship="unitycollegeModel.FK__StudentCour__cid__208CD6FA" FromRole="Courses" ToRole="StudentCourse" />
+          <NavigationProperty Name="Subjects" Relationship="unitycollegeModel.FK__Subjects__cid__19DFD96B" FromRole="Courses" ToRole="Subjects" />
+          <NavigationProperty Name="Users" Relationship="unitycollegeModel.FK__Users__udept__151B244E" FromRole="Courses" ToRole="Users" />
+          <NavigationProperty Name="PlacementsList" Relationship="unitycollegeModel.fk_cid" FromRole="Courses" ToRole="PlacementsList" /></EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="eid" />
+          </Key>
+          <Property Name="eid" Type="Int32" Nullable="false" />
+          <Property Name="ename" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="eshortdesc" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="elongdesc" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="estartdatetime" Type="DateTime" Nullable="false" />
+          <Property Name="eendatetime" Type="DateTime" Nullable="false" />
+          <Property Name="elocation" Type="String" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="eseats" Type="Int32" />
+          <Property Name="evalid" Type="Boolean" />
+          <Property Name="eseatsavailable" Type="Int32" />
+          <NavigationProperty Name="RegisterEvent" Relationship="unitycollegeModel.FK__RegisterEve__eid__5165187F" FromRole="Event" ToRole="RegisterEvent" />
+        </EntityType>
+        <EntityType Name="ExamDetailType">
+          <Key>
+            <PropertyRef Name="edtid" />
+          </Key>
+          <Property Name="edtid" Type="Int32" Nullable="false" />
+          <Property Name="edtname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="ExamRelated" Relationship="unitycollegeModel.FK__ExamRelat__edtid__6EF57B66" FromRole="ExamDetailType" ToRole="ExamRelated" />
+        </EntityType>
+        <EntityType Name="ExamRelated">
+          <Key>
+            <PropertyRef Name="erid" />
+          </Key>
+          <Property Name="erid" Type="Int32" Nullable="false" />
+          <Property Name="ersem" Type="Int32" Nullable="false" />
+          <Property Name="erfile" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="eryear" Type="DateTime" Nullable="false" />
+          <Property Name="ervalid" Type="Boolean" />
+          <NavigationProperty Name="Courses" Relationship="unitycollegeModel.FK__ExamRelated__cid__6E01572D" FromRole="ExamRelated" ToRole="Courses" />
+          <NavigationProperty Name="ExamDetailType" Relationship="unitycollegeModel.FK__ExamRelat__edtid__6EF57B66" FromRole="ExamRelated" ToRole="ExamDetailType" />
+          <Property Name="erdesc" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="ExtraCourseRegister">
+          <Key>
+            <PropertyRef Name="recid" />
+          </Key>
+          <Property Name="recid" Type="Int32" Nullable="false" />
+          <Property Name="recdate" Type="DateTime" Nullable="false" />
+          <Property Name="recstartdate" Type="DateTime" Nullable="false" />
+          <Property Name="recenddate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="ExtraCourses" Relationship="unitycollegeModel.FK__ExtraCours__ecid__25518C17" FromRole="ExtraCourseRegister" ToRole="ExtraCourses" />
+          <NavigationProperty Name="Users" Relationship="unitycollegeModel.FK__ExtraCourse__uid__2645B050" FromRole="ExtraCourseRegister" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="ExtraCourses">
+          <Key>
+            <PropertyRef Name="ecid" />
+          </Key>
+          <Property Name="ecid" Type="Int32" Nullable="false" />
+          <Property Name="ecname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ecduration" Type="Int32" Nullable="false" />
+          <Property Name="ecdescription" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="ecbenefits" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ecseats" Type="Int32" />
+          <Property Name="ecvalid" Type="Boolean" />
+          <NavigationProperty Name="ExtraCourseRegister" Relationship="unitycollegeModel.FK__ExtraCours__ecid__25518C17" FromRole="ExtraCourses" ToRole="ExtraCourseRegister" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="fid" />
+          </Key>
+          <Property Name="fid" Type="Int32" Nullable="false" />
+          <Property Name="fcontent" Type="String" Nullable="false" MaxLength="800" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Users" Relationship="unitycollegeModel.FK__Feedback__adminu__2CF2ADDF" FromRole="Feedback" ToRole="Users" />
+          <NavigationProperty Name="FeedbackType" Relationship="unitycollegeModel.FK__Feedback__ftid__2B0A656D" FromRole="Feedback" ToRole="FeedbackType" />
+          <Property Name="fsubject" Type="String" Nullable="true" />
+          <Property Name="fname" Type="String" Nullable="true" />
+          <Property Name="femail" Type="String" Nullable="true" />
+          <Property Name="fdate" Type="DateTime" Nullable="true" />
+          <Property Name="funread" Type="Boolean" Nullable="true" /></EntityType>
+        <EntityType Name="FeedbackType">
+          <Key>
+            <PropertyRef Name="ftid" />
+          </Key>
+          <Property Name="ftid" Type="Int32" Nullable="false" />
+          <Property Name="ftname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Feedback" Relationship="unitycollegeModel.FK__Feedback__ftid__2B0A656D" FromRole="FeedbackType" ToRole="Feedback" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="nid" />
+          </Key>
+          <Property Name="nid" Type="Int32" Nullable="false" />
+          <Property Name="nheader" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="nshortdesc" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="nlongdesc" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="ndatetime" Type="DateTime" Nullable="false" />
+          <Property Name="nvalid" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="OnlineLibrary">
+          <Key>
+            <PropertyRef Name="olid" />
+          </Key>
+          <Property Name="olid" Type="Int32" Nullable="false" />
+          <Property Name="oltname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="oldesc" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="olfile" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="olvalid" Type="Boolean" />
+          <NavigationProperty Name="Courses" Relationship="unitycollegeModel.FK__OnlineLibra__cid__628FA481" FromRole="OnlineLibrary" ToRole="Courses" />
+          <Property Name="csem" Type="Int32" Nullable="true" />
+          <NavigationProperty Name="Subjects" Relationship="unitycollegeModel.fk_sid" FromRole="OnlineLibrary" ToRole="Subjects" /></EntityType>
+        <EntityType Name="PlacementsList">
+          <Key>
+            <PropertyRef Name="pid" />
+          </Key>
+          <Property Name="pid" Type="Int32" Nullable="false" />
+          <Property Name="pcompanyname" Type="String" Nullable="false" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="pdate" Type="DateTime" Nullable="false" />
+          <Property Name="pfile" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="pjobtitle" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="pvalid" Type="Boolean" />
+          <NavigationProperty Name="PlacementType" Relationship="unitycollegeModel.FK__Placements__ptid__5CD6CB2B" FromRole="PlacementsList" ToRole="PlacementType" />
+          <Property Name="pwebsite" Type="String" Nullable="true" />
+          <Property Name="pinterviewlocation" Type="String" Nullable="true" />
+          <NavigationProperty Name="Courses" Relationship="unitycollegeModel.fk_cid" FromRole="PlacementsList" ToRole="Courses" />
+          <Property Name="peligibility" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="PlacementType">
+          <Key>
+            <PropertyRef Name="ptid" />
+          </Key>
+          <Property Name="ptid" Type="Int32" Nullable="false" />
+          <Property Name="ptname" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="PlacementsList" Relationship="unitycollegeModel.FK__Placements__ptid__5CD6CB2B" FromRole="PlacementType" ToRole="PlacementsList" />
+        </EntityType>
+        <EntityType Name="RegisterEvent">
+          <Key>
+            <PropertyRef Name="reid" />
+          </Key>
+          <Property Name="reid" Type="Int32" Nullable="false" />
+          <Property Name="refullname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="reemail" Type="String" Nullable="false" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="recollege" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="recourse" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Event" Relationship="unitycollegeModel.FK__RegisterEve__eid__5165187F" FromRole="RegisterEvent" ToRole="Event" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="rid" />
+          </Key>
+          <Property Name="rid" Type="Int32" Nullable="false" />
+          <Property Name="rname" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Alumni" Relationship="unitycollegeModel.FK__Alumni__rid__37A5467C" FromRole="Roles" ToRole="Alumni" />
+          <NavigationProperty Name="Users" Relationship="unitycollegeModel.FK__Users__rid__1332DBDC" FromRole="Roles" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="StudentCourse">
+          <Key>
+            <PropertyRef Name="scid" />
+          </Key>
+          <Property Name="scid" Type="Int32" Nullable="false" />
+          <Property Name="scStartdate" Type="DateTime" Nullable="false" />
+          <Property Name="scEnddate" Type="DateTime" Nullable="false" />
+          <Property Name="scCurrentsem" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Courses" Relationship="unitycollegeModel.FK__StudentCour__cid__208CD6FA" FromRole="StudentCourse" ToRole="Courses" />
+          <NavigationProperty Name="Users" Relationship="unitycollegeModel.FK__StudentCour__uid__1F98B2C1" FromRole="StudentCourse" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Subjects">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="Int32" Nullable="false" />
+          <Property Name="sname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ssem" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Courses" Relationship="unitycollegeModel.FK__Subjects__cid__19DFD96B" FromRole="Subjects" ToRole="Courses" />
+          <Property Name="svalid" Type="Boolean" Nullable="true" />
+          <NavigationProperty Name="OnlineLibrary" Relationship="unitycollegeModel.fk_sid" FromRole="Subjects" ToRole="OnlineLibrary" />
+          <NavigationProperty Name="SubjectFaculty" Relationship="unitycollegeModel.FK__SubjectFacu__sid__498EEC8D" FromRole="Subjects" ToRole="SubjectFaculty" /></EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="uid" />
+          </Key>
+          <Property Name="uid" Type="Int32" Nullable="false" />
+          <Property Name="uFullname" Type="String" Nullable="false" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="upassword" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="uvalid" Type="Boolean" />
+          <Property Name="uemail" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="uContact" Type="Int64" Nullable="false" />
+          <Property Name="uInterest" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+          <Property Name="ugs" Type="Boolean" />
+          <NavigationProperty Name="CommunicateFaculty" Relationship="unitycollegeModel.FK__Communica__admin__339FAB6E" FromRole="Users" ToRole="CommunicateFaculty" />
+          <NavigationProperty Name="CommunicateFaculty1" Relationship="unitycollegeModel.FK__Communica__fromu__31B762FC" FromRole="Users" ToRole="CommunicateFaculty" />
+          <NavigationProperty Name="CommunicateFaculty2" Relationship="unitycollegeModel.FK__Communica__touid__32AB8735" FromRole="Users" ToRole="CommunicateFaculty" />
+          <NavigationProperty Name="Courses" Relationship="unitycollegeModel.FK__Users__udept__151B244E" FromRole="Users" ToRole="Courses" />
+          <NavigationProperty Name="ExtraCourseRegister" Relationship="unitycollegeModel.FK__ExtraCourse__uid__2645B050" FromRole="Users" ToRole="ExtraCourseRegister" />
+          <NavigationProperty Name="Feedback" Relationship="unitycollegeModel.FK__Feedback__adminu__2CF2ADDF" FromRole="Users" ToRole="Feedback" />
+          <NavigationProperty Name="Roles" Relationship="unitycollegeModel.FK__Users__rid__1332DBDC" FromRole="Users" ToRole="Roles" />
+          <NavigationProperty Name="StudentCourse" Relationship="unitycollegeModel.FK__StudentCour__uid__1F98B2C1" FromRole="Users" ToRole="StudentCourse" />
+          <NavigationProperty Name="SubjectFaculty" Relationship="unitycollegeModel.FK__SubjectFacu__uid__4A8310C6" FromRole="Users" ToRole="SubjectFaculty" /></EntityType>
+        <Association Name="FK__Alumni__cid__36B12243">
+          <End Role="Courses" Type="unitycollegeModel.Courses" Multiplicity="0..1" />
+          <End Role="Alumni" Type="unitycollegeModel.Alumni" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__Alumni__rid__37A5467C">
+          <End Role="Roles" Type="unitycollegeModel.Roles" Multiplicity="0..1" />
+          <End Role="Alumni" Type="unitycollegeModel.Alumni" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__Communica__admin__339FAB6E">
+          <End Role="Users" Type="unitycollegeModel.Users" Multiplicity="0..1" />
+          <End Role="CommunicateFaculty" Type="unitycollegeModel.CommunicateFaculty" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__Communica__fromu__31B762FC">
+          <End Role="Users" Type="unitycollegeModel.Users" Multiplicity="0..1" />
+          <End Role="CommunicateFaculty" Type="unitycollegeModel.CommunicateFaculty" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__Communica__touid__32AB8735">
+          <End Role="Users" Type="unitycollegeModel.Users" Multiplicity="0..1" />
+          <End Role="CommunicateFaculty" Type="unitycollegeModel.CommunicateFaculty" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__ExamRelated__cid__6E01572D">
+          <End Role="Courses" Type="unitycollegeModel.Courses" Multiplicity="0..1" />
+          <End Role="ExamRelated" Type="unitycollegeModel.ExamRelated" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__OnlineLibra__cid__628FA481">
+          <End Role="Courses" Type="unitycollegeModel.Courses" Multiplicity="0..1" />
+          <End Role="OnlineLibrary" Type="unitycollegeModel.OnlineLibrary" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__StudentCour__cid__208CD6FA">
+          <End Role="Courses" Type="unitycollegeModel.Courses" Multiplicity="0..1" />
+          <End Role="StudentCourse" Type="unitycollegeModel.StudentCourse" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__Subjects__cid__19DFD96B">
+          <End Role="Courses" Type="unitycollegeModel.Courses" Multiplicity="0..1" />
+          <End Role="Subjects" Type="unitycollegeModel.Subjects" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__Users__udept__151B244E">
+          <End Role="Courses" Type="unitycollegeModel.Courses" Multiplicity="0..1" />
+          <End Role="Users" Type="unitycollegeModel.Users" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__RegisterEve__eid__5165187F">
+          <End Role="Event" Type="unitycollegeModel.Event" Multiplicity="0..1" />
+          <End Role="RegisterEvent" Type="unitycollegeModel.RegisterEvent" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__ExamRelat__edtid__6EF57B66">
+          <End Role="ExamDetailType" Type="unitycollegeModel.ExamDetailType" Multiplicity="0..1" />
+          <End Role="ExamRelated" Type="unitycollegeModel.ExamRelated" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__ExtraCours__ecid__25518C17">
+          <End Role="ExtraCourses" Type="unitycollegeModel.ExtraCourses" Multiplicity="0..1" />
+          <End Role="ExtraCourseRegister" Type="unitycollegeModel.ExtraCourseRegister" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__ExtraCourse__uid__2645B050">
+          <End Role="Users" Type="unitycollegeModel.Users" Multiplicity="0..1" />
+          <End Role="ExtraCourseRegister" Type="unitycollegeModel.ExtraCourseRegister" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__Feedback__adminu__2CF2ADDF">
+          <End Role="Users" Type="unitycollegeModel.Users" Multiplicity="0..1" />
+          <End Role="Feedback" Type="unitycollegeModel.Feedback" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__Feedback__ftid__2B0A656D">
+          <End Role="FeedbackType" Type="unitycollegeModel.FeedbackType" Multiplicity="0..1" />
+          <End Role="Feedback" Type="unitycollegeModel.Feedback" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__Placements__ptid__5CD6CB2B">
+          <End Role="PlacementType" Type="unitycollegeModel.PlacementType" Multiplicity="0..1" />
+          <End Role="PlacementsList" Type="unitycollegeModel.PlacementsList" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__Users__rid__1332DBDC">
+          <End Role="Roles" Type="unitycollegeModel.Roles" Multiplicity="0..1" />
+          <End Role="Users" Type="unitycollegeModel.Users" Multiplicity="*" />
+        </Association>
+        <Association Name="FK__StudentCour__uid__1F98B2C1">
+          <End Role="Users" Type="unitycollegeModel.Users" Multiplicity="0..1" />
+          <End Role="StudentCourse" Type="unitycollegeModel.StudentCourse" Multiplicity="*" />
+        </Association>
+        <Association Name="fk_cid">
+          <End Type="unitycollegeModel.Courses" Role="Courses" Multiplicity="0..1" />
+          <End Type="unitycollegeModel.PlacementsList" Role="PlacementsList" Multiplicity="*" /></Association>
+        <Association Name="fk_sid">
+          <End Type="unitycollegeModel.Subjects" Role="Subjects" Multiplicity="0..1" />
+          <End Type="unitycollegeModel.OnlineLibrary" Role="OnlineLibrary" Multiplicity="*" /></Association>
+        <EntityType Name="SubjectFaculty">
+          <Key>
+            <PropertyRef Name="sfid" /></Key>
+          <Property Name="sfid" Type="Int32" Nullable="false" />
+          <Property Name="sfstartdate" Type="DateTime" Nullable="true" />
+          <Property Name="sfvalid" Type="Boolean" Nullable="true" />
+          <NavigationProperty Name="Subjects" Relationship="unitycollegeModel.FK__SubjectFacu__sid__498EEC8D" FromRole="SubjectFaculty" ToRole="Subjects" />
+          <NavigationProperty Name="Users" Relationship="unitycollegeModel.FK__SubjectFacu__uid__4A8310C6" FromRole="SubjectFaculty" ToRole="Users" /></EntityType>
+        <Association Name="FK__SubjectFacu__sid__498EEC8D">
+          <End Type="unitycollegeModel.Subjects" Role="Subjects" Multiplicity="0..1" />
+          <End Type="unitycollegeModel.SubjectFaculty" Role="SubjectFaculty" Multiplicity="*" /></Association>
+        <Association Name="FK__SubjectFacu__uid__4A8310C6">
+          <End Type="unitycollegeModel.Users" Role="Users" Multiplicity="0..1" />
+          <End Type="unitycollegeModel.SubjectFaculty" Role="SubjectFaculty" Multiplicity="*" /></Association></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="unitycollegeModelStoreContainer" CdmEntityContainer="unitycollegeEntities1">
+          <EntitySetMapping Name="Alumni">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.Alumni)">
+              <MappingFragment StoreEntitySet="Alumni">
+                <ScalarProperty Name="aid" ColumnName="aid" />
+                <ScalarProperty Name="aname" ColumnName="aname" />
+                <ScalarProperty Name="aemail" ColumnName="aemail" />
+                <ScalarProperty Name="acompany" ColumnName="acompany" />
+                <ScalarProperty Name="apassyear" ColumnName="apassyear" />
+                <ScalarProperty Name="aworkprofile" ColumnName="aworkprofile" />
+                <ScalarProperty Name="avalid" ColumnName="avalid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CommunicateFaculty">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.CommunicateFaculty)">
+              <MappingFragment StoreEntitySet="CommunicateFaculty">
+                <ScalarProperty Name="cfid" ColumnName="cfid" />
+                <ScalarProperty Name="cfcontent" ColumnName="cfcontent" />
+                <ScalarProperty Name="cfunread" ColumnName="cfunread" />
+                <ScalarProperty Name="cfdatetime" ColumnName="cfdatetime" />
+                <ScalarProperty Name="cfvalid" ColumnName="cfvalid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Courses">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.Courses)">
+              <MappingFragment StoreEntitySet="Courses">
+                <ScalarProperty Name="cid" ColumnName="cid" />
+                <ScalarProperty Name="cname" ColumnName="cname" />
+                <ScalarProperty Name="cduration" ColumnName="cduration" />
+                <ScalarProperty Name="cdescription" ColumnName="cdescription" />
+                <ScalarProperty Name="csemesters" ColumnName="csemesters" />
+                <ScalarProperty Name="cstartyear" ColumnName="cstartyear" />
+                <ScalarProperty Name="caccreditation" ColumnName="caccreditation" />
+                <ScalarProperty Name="cvalid" ColumnName="cvalid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Event">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.Event)">
+              <MappingFragment StoreEntitySet="Event">
+                <ScalarProperty Name="eid" ColumnName="eid" />
+                <ScalarProperty Name="ename" ColumnName="ename" />
+                <ScalarProperty Name="eshortdesc" ColumnName="eshortdesc" />
+                <ScalarProperty Name="elongdesc" ColumnName="elongdesc" />
+                <ScalarProperty Name="estartdatetime" ColumnName="estartdatetime" />
+                <ScalarProperty Name="eendatetime" ColumnName="eendatetime" />
+                <ScalarProperty Name="elocation" ColumnName="elocation" />
+                <ScalarProperty Name="eseats" ColumnName="eseats" />
+                <ScalarProperty Name="evalid" ColumnName="evalid" />
+                <ScalarProperty Name="eseatsavailable" ColumnName="eseatsavailable" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExamDetailType">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.ExamDetailType)">
+              <MappingFragment StoreEntitySet="ExamDetailType">
+                <ScalarProperty Name="edtid" ColumnName="edtid" />
+                <ScalarProperty Name="edtname" ColumnName="edtname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExamRelated">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.ExamRelated)">
+              <MappingFragment StoreEntitySet="ExamRelated">
+                <ScalarProperty Name="erdesc" ColumnName="erdesc" />
+                <ScalarProperty Name="erid" ColumnName="erid" />
+                <ScalarProperty Name="ersem" ColumnName="ersem" />
+                <ScalarProperty Name="erfile" ColumnName="erfile" />
+                <ScalarProperty Name="eryear" ColumnName="eryear" />
+                <ScalarProperty Name="ervalid" ColumnName="ervalid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExtraCourseRegister">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.ExtraCourseRegister)">
+              <MappingFragment StoreEntitySet="ExtraCourseRegister">
+                <ScalarProperty Name="recid" ColumnName="recid" />
+                <ScalarProperty Name="recdate" ColumnName="recdate" />
+                <ScalarProperty Name="recstartdate" ColumnName="recstartdate" />
+                <ScalarProperty Name="recenddate" ColumnName="recenddate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExtraCourses">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.ExtraCourses)">
+              <MappingFragment StoreEntitySet="ExtraCourses">
+                <ScalarProperty Name="ecid" ColumnName="ecid" />
+                <ScalarProperty Name="ecname" ColumnName="ecname" />
+                <ScalarProperty Name="ecduration" ColumnName="ecduration" />
+                <ScalarProperty Name="ecdescription" ColumnName="ecdescription" />
+                <ScalarProperty Name="ecbenefits" ColumnName="ecbenefits" />
+                <ScalarProperty Name="ecseats" ColumnName="ecseats" />
+                <ScalarProperty Name="ecvalid" ColumnName="ecvalid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Feedback">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.Feedback)">
+              <MappingFragment StoreEntitySet="Feedback">
+                <ScalarProperty Name="funread" ColumnName="funread" />
+                <ScalarProperty Name="fdate" ColumnName="fdate" />
+                <ScalarProperty Name="femail" ColumnName="femail" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="fsubject" ColumnName="fsubject" />
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="fcontent" ColumnName="fcontent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FeedbackType">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.FeedbackType)">
+              <MappingFragment StoreEntitySet="FeedbackType">
+                <ScalarProperty Name="ftid" ColumnName="ftid" />
+                <ScalarProperty Name="ftname" ColumnName="ftname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.News)">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="nid" ColumnName="nid" />
+                <ScalarProperty Name="nheader" ColumnName="nheader" />
+                <ScalarProperty Name="nshortdesc" ColumnName="nshortdesc" />
+                <ScalarProperty Name="nlongdesc" ColumnName="nlongdesc" />
+                <ScalarProperty Name="ndatetime" ColumnName="ndatetime" />
+                <ScalarProperty Name="nvalid" ColumnName="nvalid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OnlineLibrary">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.OnlineLibrary)">
+              <MappingFragment StoreEntitySet="OnlineLibrary">
+                <ScalarProperty Name="csem" ColumnName="csem" />
+                <ScalarProperty Name="olid" ColumnName="olid" />
+                <ScalarProperty Name="oltname" ColumnName="oltname" />
+                <ScalarProperty Name="oldesc" ColumnName="oldesc" />
+                <ScalarProperty Name="olfile" ColumnName="olfile" />
+                <ScalarProperty Name="olvalid" ColumnName="olvalid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlacementsList">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.PlacementsList)">
+              <MappingFragment StoreEntitySet="PlacementsList">
+                <ScalarProperty Name="peligibility" ColumnName="peligibility" />
+                <ScalarProperty Name="pinterviewlocation" ColumnName="pinterviewlocation" />
+                <ScalarProperty Name="pwebsite" ColumnName="pwebsite" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+                <ScalarProperty Name="pcompanyname" ColumnName="pcompanyname" />
+                <ScalarProperty Name="pdate" ColumnName="pdate" />
+                <ScalarProperty Name="pfile" ColumnName="pfile" />
+                <ScalarProperty Name="pjobtitle" ColumnName="pjobtitle" />
+                <ScalarProperty Name="pvalid" ColumnName="pvalid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlacementType">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.PlacementType)">
+              <MappingFragment StoreEntitySet="PlacementType">
+                <ScalarProperty Name="ptid" ColumnName="ptid" />
+                <ScalarProperty Name="ptname" ColumnName="ptname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegisterEvent">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.RegisterEvent)">
+              <MappingFragment StoreEntitySet="RegisterEvent">
+                <ScalarProperty Name="reid" ColumnName="reid" />
+                <ScalarProperty Name="refullname" ColumnName="refullname" />
+                <ScalarProperty Name="reemail" ColumnName="reemail" />
+                <ScalarProperty Name="recollege" ColumnName="recollege" />
+                <ScalarProperty Name="recourse" ColumnName="recourse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.Roles)">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="rid" ColumnName="rid" />
+                <ScalarProperty Name="rname" ColumnName="rname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentCourse">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.StudentCourse)">
+              <MappingFragment StoreEntitySet="StudentCourse">
+                <ScalarProperty Name="scid" ColumnName="scid" />
+                <ScalarProperty Name="scStartdate" ColumnName="scStartdate" />
+                <ScalarProperty Name="scEnddate" ColumnName="scEnddate" />
+                <ScalarProperty Name="scCurrentsem" ColumnName="scCurrentsem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.Subjects)">
+              <MappingFragment StoreEntitySet="Subjects">
+                <ScalarProperty Name="svalid" ColumnName="svalid" />
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="sname" ColumnName="sname" />
+                <ScalarProperty Name="ssem" ColumnName="ssem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.sysdiagrams)">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.Users)">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="uFullname" ColumnName="uFullname" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="upassword" ColumnName="upassword" />
+                <ScalarProperty Name="uvalid" ColumnName="uvalid" />
+                <ScalarProperty Name="uemail" ColumnName="uemail" />
+                <ScalarProperty Name="uContact" ColumnName="uContact" />
+                <ScalarProperty Name="uInterest" ColumnName="uInterest" />
+                <ScalarProperty Name="ugs" ColumnName="ugs" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK__Alumni__cid__36B12243" TypeName="unitycollegeModel.FK__Alumni__cid__36B12243" StoreEntitySet="Alumni">
+            <EndProperty Name="Courses">
+              <ScalarProperty Name="cid" ColumnName="cid" />
+            </EndProperty>
+            <EndProperty Name="Alumni">
+              <ScalarProperty Name="aid" ColumnName="aid" />
+            </EndProperty>
+            <Condition ColumnName="cid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__Alumni__rid__37A5467C" TypeName="unitycollegeModel.FK__Alumni__rid__37A5467C" StoreEntitySet="Alumni">
+            <EndProperty Name="Roles">
+              <ScalarProperty Name="rid" ColumnName="rid" />
+            </EndProperty>
+            <EndProperty Name="Alumni">
+              <ScalarProperty Name="aid" ColumnName="aid" />
+            </EndProperty>
+            <Condition ColumnName="rid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__Communica__admin__339FAB6E" TypeName="unitycollegeModel.FK__Communica__admin__339FAB6E" StoreEntitySet="CommunicateFaculty">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="uid" ColumnName="adminuid" />
+            </EndProperty>
+            <EndProperty Name="CommunicateFaculty">
+              <ScalarProperty Name="cfid" ColumnName="cfid" />
+            </EndProperty>
+            <Condition ColumnName="adminuid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__Communica__fromu__31B762FC" TypeName="unitycollegeModel.FK__Communica__fromu__31B762FC" StoreEntitySet="CommunicateFaculty">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="uid" ColumnName="fromuid" />
+            </EndProperty>
+            <EndProperty Name="CommunicateFaculty">
+              <ScalarProperty Name="cfid" ColumnName="cfid" />
+            </EndProperty>
+            <Condition ColumnName="fromuid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__Communica__touid__32AB8735" TypeName="unitycollegeModel.FK__Communica__touid__32AB8735" StoreEntitySet="CommunicateFaculty">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="uid" ColumnName="touid" />
+            </EndProperty>
+            <EndProperty Name="CommunicateFaculty">
+              <ScalarProperty Name="cfid" ColumnName="cfid" />
+            </EndProperty>
+            <Condition ColumnName="touid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__ExamRelated__cid__6E01572D" TypeName="unitycollegeModel.FK__ExamRelated__cid__6E01572D" StoreEntitySet="ExamRelated">
+            <EndProperty Name="Courses">
+              <ScalarProperty Name="cid" ColumnName="cid" />
+            </EndProperty>
+            <EndProperty Name="ExamRelated">
+              <ScalarProperty Name="erid" ColumnName="erid" />
+            </EndProperty>
+            <Condition ColumnName="cid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__OnlineLibra__cid__628FA481" TypeName="unitycollegeModel.FK__OnlineLibra__cid__628FA481" StoreEntitySet="OnlineLibrary">
+            <EndProperty Name="Courses">
+              <ScalarProperty Name="cid" ColumnName="cid" />
+            </EndProperty>
+            <EndProperty Name="OnlineLibrary">
+              <ScalarProperty Name="olid" ColumnName="olid" />
+            </EndProperty>
+            <Condition ColumnName="cid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__StudentCour__cid__208CD6FA" TypeName="unitycollegeModel.FK__StudentCour__cid__208CD6FA" StoreEntitySet="StudentCourse">
+            <EndProperty Name="Courses">
+              <ScalarProperty Name="cid" ColumnName="cid" />
+            </EndProperty>
+            <EndProperty Name="StudentCourse">
+              <ScalarProperty Name="scid" ColumnName="scid" />
+            </EndProperty>
+            <Condition ColumnName="cid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__Subjects__cid__19DFD96B" TypeName="unitycollegeModel.FK__Subjects__cid__19DFD96B" StoreEntitySet="Subjects">
+            <EndProperty Name="Courses">
+              <ScalarProperty Name="cid" ColumnName="cid" />
+            </EndProperty>
+            <EndProperty Name="Subjects">
+              <ScalarProperty Name="sid" ColumnName="sid" />
+            </EndProperty>
+            <Condition ColumnName="cid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__Users__udept__151B244E" TypeName="unitycollegeModel.FK__Users__udept__151B244E" StoreEntitySet="Users">
+            <EndProperty Name="Courses">
+              <ScalarProperty Name="cid" ColumnName="udept" />
+            </EndProperty>
+            <EndProperty Name="Users">
+              <ScalarProperty Name="uid" ColumnName="uid" />
+            </EndProperty>
+            <Condition ColumnName="udept" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__RegisterEve__eid__5165187F" TypeName="unitycollegeModel.FK__RegisterEve__eid__5165187F" StoreEntitySet="RegisterEvent">
+            <EndProperty Name="Event">
+              <ScalarProperty Name="eid" ColumnName="eid" />
+            </EndProperty>
+            <EndProperty Name="RegisterEvent">
+              <ScalarProperty Name="reid" ColumnName="reid" />
+            </EndProperty>
+            <Condition ColumnName="eid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__ExamRelat__edtid__6EF57B66" TypeName="unitycollegeModel.FK__ExamRelat__edtid__6EF57B66" StoreEntitySet="ExamRelated">
+            <EndProperty Name="ExamDetailType">
+              <ScalarProperty Name="edtid" ColumnName="edtid" />
+            </EndProperty>
+            <EndProperty Name="ExamRelated">
+              <ScalarProperty Name="erid" ColumnName="erid" />
+            </EndProperty>
+            <Condition ColumnName="edtid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__ExtraCours__ecid__25518C17" TypeName="unitycollegeModel.FK__ExtraCours__ecid__25518C17" StoreEntitySet="ExtraCourseRegister">
+            <EndProperty Name="ExtraCourses">
+              <ScalarProperty Name="ecid" ColumnName="ecid" />
+            </EndProperty>
+            <EndProperty Name="ExtraCourseRegister">
+              <ScalarProperty Name="recid" ColumnName="recid" />
+            </EndProperty>
+            <Condition ColumnName="ecid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__ExtraCourse__uid__2645B050" TypeName="unitycollegeModel.FK__ExtraCourse__uid__2645B050" StoreEntitySet="ExtraCourseRegister">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="uid" ColumnName="uid" />
+            </EndProperty>
+            <EndProperty Name="ExtraCourseRegister">
+              <ScalarProperty Name="recid" ColumnName="recid" />
+            </EndProperty>
+            <Condition ColumnName="uid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__Feedback__adminu__2CF2ADDF" TypeName="unitycollegeModel.FK__Feedback__adminu__2CF2ADDF" StoreEntitySet="Feedback">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="uid" ColumnName="adminuid" />
+            </EndProperty>
+            <EndProperty Name="Feedback">
+              <ScalarProperty Name="fid" ColumnName="fid" />
+            </EndProperty>
+            <Condition ColumnName="adminuid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__Feedback__ftid__2B0A656D" TypeName="unitycollegeModel.FK__Feedback__ftid__2B0A656D" StoreEntitySet="Feedback">
+            <EndProperty Name="FeedbackType">
+              <ScalarProperty Name="ftid" ColumnName="ftid" />
+            </EndProperty>
+            <EndProperty Name="Feedback">
+              <ScalarProperty Name="fid" ColumnName="fid" />
+            </EndProperty>
+            <Condition ColumnName="ftid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__Placements__ptid__5CD6CB2B" TypeName="unitycollegeModel.FK__Placements__ptid__5CD6CB2B" StoreEntitySet="PlacementsList">
+            <EndProperty Name="PlacementType">
+              <ScalarProperty Name="ptid" ColumnName="ptid" />
+            </EndProperty>
+            <EndProperty Name="PlacementsList">
+              <ScalarProperty Name="pid" ColumnName="pid" />
+            </EndProperty>
+            <Condition ColumnName="ptid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__Users__rid__1332DBDC" TypeName="unitycollegeModel.FK__Users__rid__1332DBDC" StoreEntitySet="Users">
+            <EndProperty Name="Roles">
+              <ScalarProperty Name="rid" ColumnName="rid" />
+            </EndProperty>
+            <EndProperty Name="Users">
+              <ScalarProperty Name="uid" ColumnName="uid" />
+            </EndProperty>
+            <Condition ColumnName="rid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FK__StudentCour__uid__1F98B2C1" TypeName="unitycollegeModel.FK__StudentCour__uid__1F98B2C1" StoreEntitySet="StudentCourse">
+            <EndProperty Name="Users">
+              <ScalarProperty Name="uid" ColumnName="uid" />
+            </EndProperty>
+            <EndProperty Name="StudentCourse">
+              <ScalarProperty Name="scid" ColumnName="scid" />
+            </EndProperty>
+            <Condition ColumnName="uid" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="fk_cid" TypeName="unitycollegeModel.fk_cid" StoreEntitySet="PlacementsList">
+            <EndProperty Name="PlacementsList">
+              <ScalarProperty Name="pid" ColumnName="pid" /></EndProperty>
+            <EndProperty Name="Courses">
+              <ScalarProperty Name="cid" ColumnName="cid" /></EndProperty>
+            <Condition ColumnName="cid" IsNull="false" /></AssociationSetMapping>
+          <AssociationSetMapping Name="fk_sid" TypeName="unitycollegeModel.fk_sid" StoreEntitySet="OnlineLibrary">
+            <EndProperty Name="OnlineLibrary">
+              <ScalarProperty Name="olid" ColumnName="olid" /></EndProperty>
+            <EndProperty Name="Subjects">
+              <ScalarProperty Name="sid" ColumnName="sid" /></EndProperty>
+            <Condition ColumnName="sid" IsNull="false" /></AssociationSetMapping>
+          <EntitySetMapping Name="SubjectFaculty">
+            <EntityTypeMapping TypeName="IsTypeOf(unitycollegeModel.SubjectFaculty)">
+              <MappingFragment StoreEntitySet="SubjectFaculty">
+                <ScalarProperty Name="sfvalid" ColumnName="sfvalid" />
+                <ScalarProperty Name="sfstartdate" ColumnName="sfstartdate" />
+                <ScalarProperty Name="sfid" ColumnName="sfid" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK__SubjectFacu__sid__498EEC8D" TypeName="unitycollegeModel.FK__SubjectFacu__sid__498EEC8D" StoreEntitySet="SubjectFaculty">
+            <EndProperty Name="SubjectFaculty">
+              <ScalarProperty Name="sfid" ColumnName="sfid" /></EndProperty>
+            <EndProperty Name="Subjects">
+              <ScalarProperty Name="sid" ColumnName="sid" /></EndProperty>
+            <Condition ColumnName="sid" IsNull="false" /></AssociationSetMapping>
+          <AssociationSetMapping Name="FK__SubjectFacu__uid__4A8310C6" TypeName="unitycollegeModel.FK__SubjectFacu__uid__4A8310C6" StoreEntitySet="SubjectFaculty">
+            <EndProperty Name="SubjectFaculty">
+              <ScalarProperty Name="sfid" ColumnName="sfid" /></EndProperty>
+            <EndProperty Name="Users">
+              <ScalarProperty Name="uid" ColumnName="uid" /></EndProperty>
+            <Condition ColumnName="uid" IsNull="false" /></AssociationSetMapping></EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="unitycollegeModel.Alumni" Width="1.5" PointX="6" PointY="8.5" Height="2.4140429687499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.CommunicateFaculty" Width="1.5" PointX="8.25" PointY="20.625" Height="2.2496956380208353" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.Courses" Width="1.5" PointX="0.75" PointY="11.125" Height="3.2357796223958317" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.Event" Width="1.5" PointX="0.75" PointY="1" Height="2.7427376302083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.ExamDetailType" Width="1.5" PointX="3.75" PointY="18" Height="1.4279589843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.ExamRelated" Width="1.5" PointX="6" PointY="11.625" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.ExtraCourseRegister" Width="1.5" PointX="8.25" PointY="12.75" Height="1.9210009765624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.ExtraCourses" Width="1.5" PointX="6" PointY="19.625" Height="2.2496956380208317" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.Feedback" Width="1.5" PointX="9.75" PointY="16.25" Height="2.5783902994791674" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.FeedbackType" Width="1.5" PointX="6" PointY="23" Height="1.4279589843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.News" Width="1.5" PointX="0.75" PointY="4.75" Height="1.9210009765624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.OnlineLibrary" Width="1.5" PointX="3" PointY="11.75" Height="1.9210009765624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.PlacementsList" Width="1.5" PointX="8" PointY="0.875" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.PlacementType" Width="1.5" PointX="5.75" PointY="1.25" Height="1.4279589843749998" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.RegisterEvent" Width="1.5" PointX="3" PointY="1.375" Height="1.9210009765624998" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.Roles" Width="1.5" PointX="3.75" PointY="5.875" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.StudentCourse" Width="1.5" PointX="3" PointY="8.75" Height="1.9210009765624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.Subjects" Width="1.5" PointX="3" PointY="14.75" Height="2.2496956380208353" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" Height="1.7566536458333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="unitycollegeModel.Users" Width="1.5" PointX="6" PointY="14.625" Height="4.0575162760416674" IsExpanded="true" />
+        <AssociationConnector Association="unitycollegeModel.FK__Alumni__cid__36B12243" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.29687375" PointY="11.125" />
+          <ConnectorPoint PointX="1.29687375" PointY="8.59375" />
+          <ConnectorPoint PointX="4.822916666666667" PointY="8.59375" />
+          <ConnectorPoint PointX="4.989583333333333" PointY="8.59375" />
+          <ConnectorPoint PointX="5.666666666666667" PointY="8.59375" />
+          <ConnectorPoint PointX="5.833333333333333" PointY="8.59375" />
+          <ConnectorPoint PointX="6" PointY="8.59375" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__Alumni__rid__37A5467C" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.90625" PointY="7.4673063151041674" />
+          <ConnectorPoint PointX="4.90625" PointY="10.82377197265625" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="10.823771972656248" />
+          <ConnectorPoint PointX="5.833333333333333" PointY="10.82377197265625" />
+          <ConnectorPoint PointX="6" PointY="10.82377197265625" />
+          </AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__Communica__admin__339FAB6E" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="15.537606009050457" />
+          <ConnectorPoint PointX="7.875" PointY="15.537606009050457" />
+          <ConnectorPoint PointX="7.875" PointY="21.832021484375005" />
+          <ConnectorPoint PointX="8.25" PointY="21.832021484375005" />
+          </AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__Communica__fromu__31B762FC" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="17.997167406598258" />
+          <ConnectorPoint PointX="7.859375" PointY="17.997167406598258" />
+          <ConnectorPoint PointX="7.859375" PointY="21.197258742187504" />
+          <ConnectorPoint PointX="8.25" PointY="21.197258742187504" />
+          </AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__Communica__touid__32AB8735" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="16.393460273102651" />
+          <ConnectorPoint PointX="7.84375" PointY="16.393460273102651" />
+          <ConnectorPoint PointX="7.84375" PointY="22.38461056119792" />
+          <ConnectorPoint PointX="8.25" PointY="22.38461056119792" />
+          </AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__ExamRelated__cid__6E01572D" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.65625" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="11.656249999999998" />
+          <ConnectorPoint PointX="5.833333333333333" PointY="11.65625" />
+          <ConnectorPoint PointX="6" PointY="11.65625" />
+          </AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__OnlineLibra__cid__628FA481" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="12.71050048828125" />
+          <ConnectorPoint PointX="3" PointY="12.71050048828125" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__StudentCour__cid__208CD6FA" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="11.125" />
+          <ConnectorPoint PointX="1.9062525" PointY="9.71050048828125" />
+          <ConnectorPoint PointX="3" PointY="9.71050048828125" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__Subjects__cid__19DFD96B" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="14.525126953125" />
+          <ConnectorPoint PointX="1.5" PointY="15.874847819010418" />
+          <ConnectorPoint PointX="1.8229191666666667" PointY="15.874847819010418" />
+          <ConnectorPoint PointX="1.9895858333333332" PointY="15.874847819010418" />
+          <ConnectorPoint PointX="3" PointY="15.874847819010418" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__Users__udept__151B244E" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="14.525126953125" />
+          <ConnectorPoint PointX="1.9062525" PointY="17.499847819010419" />
+          <ConnectorPoint PointX="4.822916666666667" PointY="17.499847819010419" />
+          <ConnectorPoint PointX="4.989583333333333" PointY="17.499847819010419" />
+          <ConnectorPoint PointX="6" PointY="17.499847819010419" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__RegisterEve__eid__5165187F" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.33550048828125" />
+          <ConnectorPoint PointX="3" PointY="2.33550048828125" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__ExamRelat__edtid__6EF57B66" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.90625" PointY="18" />
+          <ConnectorPoint PointX="4.90625" PointY="11.65625" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="11.656249999999998" />
+          <ConnectorPoint PointX="5.833333333333333" PointY="11.65625" />
+          <ConnectorPoint PointX="6" PointY="11.65625" />
+          </AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__ExtraCours__ecid__25518C17" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="20.411129871093753" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="20.411129871093753" />
+          <ConnectorPoint PointX="7.927083333333333" PointY="20.411129871093753" />
+          <ConnectorPoint PointX="7.9375" PointY="20.411129871093753" />
+          <ConnectorPoint PointX="7.9375" PointY="13.546875499999999" />
+          <ConnectorPoint PointX="8.25" PointY="13.546875499999999" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__ExtraCourse__uid__2645B050" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="16.022543970352565" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="16.022543970352565" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="16.022543970352565" />
+          <ConnectorPoint PointX="8.96875" PointY="16.022543970352565" />
+          <ConnectorPoint PointX="8.96875" PointY="14.6710009765625" />
+          </AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__Feedback__adminu__2CF2ADDF" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="17.249314537154845" />
+          <ConnectorPoint PointX="7.760416666666667" PointY="17.249314537154845" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="17.249314537154845" />
+          <ConnectorPoint PointX="9.75" PointY="17.249314537154845" />
+          </AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__Feedback__ftid__2B0A656D" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="23.764750976562503" />
+          <ConnectorPoint PointX="10.53125" PointY="23.764750976562503" />
+          <ConnectorPoint PointX="10.53125" PointY="18.828390299479167" />
+          </AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__Placements__ptid__5CD6CB2B" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="1.9639794921874998" />
+          <ConnectorPoint PointX="8" PointY="1.9639794921874998" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__Users__rid__1332DBDC" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="6.6711531575520837" />
+          <ConnectorPoint PointX="5.75" PointY="6.6711531575520837" />
+          <ConnectorPoint PointX="5.75" PointY="14.124999999999996" />
+          <ConnectorPoint PointX="6.3750005000000005" PointY="14.124999999999996" />
+          <ConnectorPoint PointX="6.3750005000000005" PointY="14.625" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__StudentCour__uid__1F98B2C1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="16.031171909505208" />
+          <ConnectorPoint PointX="5.625" PointY="16.031171909505208" />
+          <ConnectorPoint PointX="5.625" PointY="9.71050048828125" />
+          <ConnectorPoint PointX="4.989583333333333" PointY="9.71050048828125" />
+          <ConnectorPoint PointX="4.822916666666667" PointY="9.71050048828125" />
+          <ConnectorPoint PointX="4.5" PointY="9.71050048828125" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.fk_cid" >
+          <ConnectorPoint PointX="2.25" PointY="11.34375" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="11.343749999999998" />
+          <ConnectorPoint PointX="5.833333333333333" PointY="11.34375" />
+          <ConnectorPoint PointX="8.09375" PointY="11.34375" />
+          <ConnectorPoint PointX="8.09375" PointY="3.6177376302083331" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.fk_sid" >
+          <ConnectorPoint PointX="3.515626" PointY="14.75" />
+          <ConnectorPoint PointX="3.515626" PointY="13.999695638020834" /></AssociationConnector>
+        <EntityTypeShape EntityType="unitycollegeModel.SubjectFaculty" Width="1.5" PointX="11.25" PointY="13.75" Height="1.7566536458333317" />
+        <AssociationConnector Association="unitycollegeModel.FK__SubjectFacu__sid__498EEC8D" >
+          <ConnectorPoint PointX="4.156252" PointY="14.75" />
+          <ConnectorPoint PointX="4.156252" PointY="14.34375" />
+          <ConnectorPoint PointX="4.822916666666667" PointY="14.34375" />
+          <ConnectorPoint PointX="4.989583333333333" PointY="14.34375" />
+          <ConnectorPoint PointX="5.541666666666667" PointY="14.34375" />
+          <ConnectorPoint PointX="5.708333333333333" PointY="14.34375" />
+          <ConnectorPoint PointX="6.2916671666666675" PointY="14.34375" />
+          <ConnectorPoint PointX="6.4583338333333336" PointY="14.34375" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="14.34375" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="14.34375" />
+          <ConnectorPoint PointX="8.125" PointY="14.34375" />
+          <ConnectorPoint PointX="8.125" PointY="14.9210009765625" />
+          <ConnectorPoint PointX="8.8854166666666661" PointY="14.9210009765625" />
+          <ConnectorPoint PointX="9.0520833333333339" PointY="14.9210009765625" />
+          <ConnectorPoint PointX="10.875" PointY="14.9210009765625" />
+          <ConnectorPoint PointX="10.875" PointY="14.628326822916666" />
+          <ConnectorPoint PointX="11.25" PointY="14.628326822916666" /></AssociationConnector>
+        <AssociationConnector Association="unitycollegeModel.FK__SubjectFacu__uid__4A8310C6" >
+          <ConnectorPoint PointX="7.5" PointY="15.40861620682945" />
+          <ConnectorPoint PointX="7.854166666666667" PointY="15.40861620682945" />
+          <ConnectorPoint PointX="8.0208333333333339" PointY="15.40861620682945" />
+          <ConnectorPoint PointX="8.8854166666666661" PointY="15.40861620682945" />
+          <ConnectorPoint PointX="9.0520833333333339" PointY="15.40861620682945" />
+          <ConnectorPoint PointX="11.25" PointY="15.40861620682945" /></AssociationConnector></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
